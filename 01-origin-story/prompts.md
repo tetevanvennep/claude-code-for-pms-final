@@ -24,15 +24,9 @@ prompt library built from your own questions.
 
 ### 1.
 
-this is my insturction , what do i need to do?
-Point Claude at the company folder
-Have it write your CLAUDE.md from everything in 00-rook/company/.
-
-### 2.
-
 what did we ship in 4.2?  what is the problem now?
 
-### 3.
+### 2.
 
 yes, draft the data request for Ravi, BUT before what, explain me what do those things mean:
 
@@ -40,26 +34,26 @@ yes, draft the data request for Ravi, BUT before what, explain me what do those 
 * Ping wait cut from 90 to 60 seconds.
 * Console filters now persist.
 
-### 4.
+### 3.
 
 do i need to send RAVI message? do you gave the insights on the previous proximity metrics and why we cut from 90 to 60?
 
-### 5.
+### 4.
 
 not sure if i should do that. can you spot something that do not align which could cause the issue?
 
-### 6.
+### 5.
 
 i do not want to message anyone, as this is not in scope of this exercise. i think i'm just need to get all the info from the folder, there's no other people who can respond my questions.
 
-### 7.
+### 6.
 
 what could be the next steps that i can take to find out what happened?
 
-### 8.
+### 7.
 
 also wondering, what were the 3 defect fixes?
 
-### 9.
+### 8.
 
 okay i'm a bit confused. give me a summery of what are the problems now and what am i trying to solve
