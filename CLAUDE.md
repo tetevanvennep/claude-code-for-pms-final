@@ -24,4 +24,71 @@ teaching scenario.
 
 ## Working context
 
-_You'll fill this in during Module 1._
+Sources: Priya's handover (`00-rook/company/notes/handoff-from-priya.docx`, 21 Aug 2026) and the Rook wiki via the rook-wiki connector (company pages, glossary, team directory, Q3 roadmap, releases, product briefs, four September handler interviews). Facts below are from those; anything marked *hypothesis* is not established.
+
+### Me and the company
+I'm the new PM for **Rook Dispatch**, taking over from Priya Raghunathan, who left 21 Aug with no overlap. Rook (founded 2014, 241 staff, HQ Site Aleph) sells coordination and provisioning software to independently operating masked responders and their handlers. Subscription, priced per active responder. We ship monthly on a release train (4.x).
+**Confidentiality:** responder cover identities are never stored and Rook can't map them to legal identities (Security Policy 4.1). Never design for, infer or attempt to work out who anyone is.
+
+### Products
+- **Rook Dispatch** (mine). Incident arrives → rank available responders → ping the top one's phone → taken, turned down or missed → next responder. Handlers use the web console; responders use the phone app. Routing config ships in the release, not as a runtime setting.
+- **Rook Supply**. Requisitions, maintenance, field failure reports; used by handlers and quartermasters. Touches Dispatch through the **Responder Availability Record**, which Dispatch writes and Supply reads to schedule maintenance into low-callout periods. So any change to how Dispatch computes availability or callout load lands in Supply with no change on their side.
+
+### People (Dispatch team)
+| Who | Role | Note |
+|---|---|---|
+| Helen Achebe | Director of Product | My director; owns roadmap and commitments. |
+| Marcus Oyelaran | Engineering Manager | Straight talker; start here when unsure. |
+| Wen Li | Staff Engineer (Berlin) | Built the ping-decision logic. Was away 14–24 Aug, which covers the 4.2 launch window. |
+| Sofia Marino | Product Designer | Owns console and phone app; ran the September interviews. |
+| Ravi Menon | Data Analyst (Singapore) | Reports the weekly acceptance numbers. |
+| Nadia Hoffmann | Support Lead (Berlin) | Hears handler complaints first; owns tickets. |
+
+### Vocabulary
+- **Responder**: independent, not an employee. **Handler**: looks after one or a few responders; the person actually using the console. **Quartermaster**: Supply approver.
+- **Callout**: the unit of work. **Ping**: a callout offered to one responder. **Taken / Turned down / Missed**: missed means nobody answered before the ping wait ran out. Turned down and missed are recorded separately but both pass the ping on.
+- **Ping wait**: how long a ping stays on a phone (the roadmap calls this "ping timeout"). Same for everyone, set per release.
+- **Acceptance rate**: pings taken ÷ all pings. Headline metric, reported weekly in aggregate. **Time-to-accept**: median seconds from ping to taken. **Coverage gap**: no available responder had the needed capability tags (nobody *could* go), distinct from low acceptance (nobody *would*).
+- **Routing priority**: the score ranking responders. Inputs: proximity (travel-time estimate), availability, capability match, recent acceptance history. Turning down or missing a ping lowers the recent-acceptance part, which lowers future ranking.
+- **Capability tags**: flight, structural-entry, hazmat-tolerant, cold-weather, aquatic, crowd-management, de-escalation. **Mutual aid**: responders covering for each other; unsupported, Q4 exploration.
+
+### Release history (Dispatch)
+- **4.0** (7 Apr): new console navigation, responder profile redesign, routing override audit log.
+- **4.1** (16 Jun): proximity uses travel-time estimate, bulk callout, push delivery reliability.
+- **4.2** (12 Aug): proximity weighted up in routing; **ping wait cut 90 → 60 s**; console filters persist; three defect fixes.
+
+### Where things stand (as of 6 Oct 2026)
+**Acceptance rate fell with 4.2, and the data points at missed pings.** From the rook-database connector (pings, callouts, responders; 29 Jun to 6 Sep 2026 only, no 2025 or time-to-accept data):
+- Acceptance was flat at ~77% for six weeks, then fell to 54% in the week 4.2 shipped (12 Aug), recovering to 66%, 67%, 73% since. A seasonal dip would have been gradual, so Priya's "mostly seasonal" read doesn't fit the timing. Callouts per day did fall (~20 to ~17), but that doesn't change a rate.
+- The drop is **missed** pings (about 4 a week to 20–38). Turned down barely moved. The gap after a missed ping went from ~92 s to ~62 s, so the ping wait changed as released. Turned-down response times didn't change (median ~22 s, max 40 s), so the extra misses are responders not answering within 60 s. *Inference:* some used to answer between 60 and 90 s.
+- **Four responders were starved**: Vesper, The Undertow, Meteor Mite and Farlight went from about 1.6–2.0 pings a day to 0.4–0.65, and their miss rates from ~3% to 53–64%. Everyone else misses ~10–15% and kept or gained pings. They're in four different areas. Meteor Mite and The Gale share Eastgate and a handler, yet one lost pings and the other gained, so proximity alone doesn't explain it. *Hypothesis:* missed pings lower recent-acceptance, which lowers rank, which means fewer pings. The mechanism itself isn't in the data.
+- **Callouts nobody took doubled**: 48 of 879 (5.5%) before 4.2, 49 of 440 (11.1%) after. Pings per callout rose from 1.23 to 1.39.
+- The two 4.2 changes (proximity weighting and ping wait) shipped together, so the data can't fully separate them. Why 90 → 60 was chosen, and how the ranking weights missed pings, aren't documented anywhere in the wiki, handover or database.
+
+**Interviews agree with the data.** Mr. Ambrose and Halloran's responder describe callouts gone before the responder was ready (matches the shorter wait). Aunt Dot and Kip describe Vesper and Meteor Mite going quiet while The Gale got non-stop pings (matches the starved/busy split). They're anecdotes from four handlers, and Halloran's call was mostly about Supply.
+
+**Roadmap is stale.** The Q3 roadmap was last reviewed 30 Jun with Priya as owner of everything. Status vs. release notes:
+- Change to who gets pinged (4.2): shipped.
+- Ping timeout tuning (4.2): shipped (90 → 60 s).
+- **Availability Confidence (4.2, "Committed"): not in the 4.2 release notes, so it appears to have been dropped.** This is likely one of the items Priya said got squeezed out. Whether it's still a Q3 commitment needs a conversation with Helen, which hasn't happened. Its likely value is unclear: wiki page is one line.
+- Requisition approval chains (4.3, Supply brief): the brief grows into an approval dashboard, routing around approvers and replacing a spreadsheet; scope is undecided.
+- Handler phone app and shared cover between responders: Q4, exploring. The handler phone app brief is dated 8 Sep and is for *handlers*, distinct from the existing responder phone app.
+- Other briefs: Bulk callout (shipped in 4.1; brief predates it), Routing override audit log (shipped in 4.0).
+
+**Other open items**
+- **No written description of how ping decisions are made.** Priya asked me to write it. The glossary lists the inputs (proximity, availability, capability match, recent acceptance history) but not the weights, so any write-up must flag the weights as unknown.
+- Console filter persistence (4.2) generates tickets; Priya calls it cosmetic noise. One handler (Mr. Ambrose) says it resets silently after updates and wants a warning.
+- Recurring console asks from interviews: larger text (status badge, counts), dark mode (Kip, repeatedly), distinct alert sounds per responder, a more noticeable live-callout indicator.
+- Supply pain (Halloran): single approval queue regardless of urgency, no feedback on field failure reports, weak catalog search. Not mine, but worth passing to the Supply PM.
+
+### How to work with me
+- Separate what the sources say from what's inferred. Priya's explanations are hypotheses until checked against data.
+- Don't propose reverting 4.2 as a default; diagnose first.
+- Roadmap changes go through Helen, not directly.
+- No colleagues are available to ask in this exercise. Work only from this folder, the wiki and the database. Where an answer isn't in those, say it's unknown instead of suggesting I message someone.
+
+- The 4.2 release page in the wiki has a comment thread worth knowing: on 14 Aug the engineering manager asked whether the proximity change was meant to apply to responders who turn jobs down or miss pings (the config doesn't distinguish) and never got an answer; on 18 and 26 Aug the support lead reported tickets ~3x normal, about two thirds "phone never goes off" and one third "gone before I could answer". Nobody in the thread pulled the weekly numbers.
+- The three 4.2 defect fixes (duplicate push on a re-sent ping, capability tag order in the responder panel, wrong time zone on the coverage report export) don't touch routing or ping timing, so they're unlikely causes.
+- The database has no time-to-accept or response-time field for taken pings and no data before 29 Jun or after 6 Sep, so a 2025 seasonality check isn't possible from it.
+- Still open: the support_tickets table (about 147 rows, columns ticket_number, filed_at, filed_by, about_responder, subject, body, status) hasn't been analysed yet; it should confirm the two-theme complaint split and whether the starved responders' handlers filed the "never goes off" tickets.
+- Still open: whether the fix should be restoring the 90 s ping wait, softening how missed pings lower rank, or both; the proximity change itself looks fine to keep.
