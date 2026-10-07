@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" font-family="Helvetica,Arial,sans-serif"><rect width="980" height="520" fill="#fff"/>
+<text x="30" y="38" font-size="20" fill="#1a1a1a" text-anchor="start" font-weight="bold">Since 4.2, callouts nobody took doubled, alongside a jump in unanswered pings</text>
+<text x="30" y="62" font-size="13" fill="#555" text-anchor="start" font-weight="normal">Rook Dispatch, 29 Jun to 6 Sep 2026. Source: rook-database (callouts, pings).</text>
+<text x="70" y="98" font-size="13" fill="#555" text-anchor="start" font-weight="normal">Weekly, % (week starting Monday)</text>
+<line x1="70" x2="590" y1="400.0" y2="400.0" stroke="#e3e3e3"/>
+<text x="62" y="404.0" font-size="12" fill="#555" text-anchor="end" font-weight="normal">0%</text>
+<line x1="70" x2="590" y1="342.0" y2="342.0" stroke="#e3e3e3"/>
+<text x="62" y="346.0" font-size="12" fill="#555" text-anchor="end" font-weight="normal">5%</text>
+<line x1="70" x2="590" y1="284.0" y2="284.0" stroke="#e3e3e3"/>
+<text x="62" y="288.0" font-size="12" fill="#555" text-anchor="end" font-weight="normal">10%</text>
+<line x1="70" x2="590" y1="226.0" y2="226.0" stroke="#e3e3e3"/>
+<text x="62" y="230.0" font-size="12" fill="#555" text-anchor="end" font-weight="normal">15%</text>
+<line x1="70" x2="590" y1="168.0" y2="168.0" stroke="#e3e3e3"/>
+<text x="62" y="172.0" font-size="12" fill="#555" text-anchor="end" font-weight="normal">20%</text>
+<line x1="70" x2="590" y1="110.0" y2="110.0" stroke="#e3e3e3"/>
+<text x="62" y="114.0" font-size="12" fill="#555" text-anchor="end" font-weight="normal">25%</text>
+<text x="100.0" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">29 Jun</text>
+<text x="151.11111111111111" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">6 Jul</text>
+<text x="202.22222222222223" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">13 Jul</text>
+<text x="253.33333333333334" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">20 Jul</text>
+<text x="304.44444444444446" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">27 Jul</text>
+<text x="355.55555555555554" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">3 Aug</text>
+<text x="406.6666666666667" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">10 Aug</text>
+<text x="457.77777777777777" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">17 Aug</text>
+<text x="508.8888888888889" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">24 Aug</text>
+<text x="560.0" y="420" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">31 Aug</text>
+<line x1="406.6666666666667" x2="406.6666666666667" y1="100" y2="400" stroke="#555" stroke-dasharray="4 3"/>
+<text x="400.6666666666667" y="96" font-size="12" fill="#555" text-anchor="end" font-weight="normal">4.2 ships Wed 12 Aug</text>
+<polyline fill="none" stroke="#1f5fbf" stroke-width="2.5" points="100.0,325.8 151.1,332.7 202.2,358.2 253.3,303.7 304.4,358.2 355.6,366.4 406.7,252.7 457.8,237.6 508.9,250.4 560.0,336.2"/>
+<circle cx="100.0" cy="325.8" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="151.1" cy="332.7" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="202.2" cy="358.2" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="253.3" cy="303.7" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="304.4" cy="358.2" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="355.6" cy="366.4" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="406.7" cy="252.7" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="457.8" cy="237.6" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="508.9" cy="250.4" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<circle cx="560.0" cy="336.2" r="4" fill="#1f5fbf" stroke="#fff" stroke-width="2"/>
+<polyline fill="none" stroke="#d9730d" stroke-width="2.5" points="100.0,380.3 151.1,372.2 202.2,360.6 253.3,367.5 304.4,372.2 355.6,386.1 406.7,150.6 457.8,194.7 508.9,228.3 560.0,252.7"/>
+<circle cx="100.0" cy="380.3" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="151.1" cy="372.2" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="202.2" cy="360.6" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="253.3" cy="367.5" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="304.4" cy="372.2" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="355.6" cy="386.1" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="406.7" cy="150.6" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="457.8" cy="194.7" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="508.9" cy="228.3" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<circle cx="560.0" cy="252.7" r="4" fill="#d9730d" stroke="#fff" stroke-width="2"/>
+<text x="384.6666666666667" y="268.68" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="normal">12.7%</text>
+<text x="457.77777777777777" y="227.6" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="normal">14.0%</text>
+<text x="560.0" y="354.2" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="normal">5.5%</text>
+<text x="432.6666666666667" y="154.6" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="normal">21.5%</text>
+<text x="560.0" y="242.68" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="normal">12.7%</text>
+<circle cx="78" cy="452" r="5" fill="#1f5fbf"/>
+<text x="90" y="456" font-size="13" fill="#1a1a1a" text-anchor="start" font-weight="normal">Callouts nobody took (% of callouts)</text>
+<circle cx="370" cy="452" r="5" fill="#d9730d"/>
+<text x="382" y="456" font-size="13" fill="#1a1a1a" text-anchor="start" font-weight="normal">Pings missed (% of pings)</text>
+<text x="650" y="98" font-size="13" fill="#555" text-anchor="start" font-weight="normal">Before vs after 4.2 (12 Aug), %</text>
+<line x1="650" x2="950" y1="400.0" y2="400.0" stroke="#e3e3e3"/>
+<line x1="650" x2="950" y1="334.0909090909091" y2="334.0909090909091" stroke="#e3e3e3"/>
+<line x1="650" x2="950" y1="268.1818181818182" y2="268.1818181818182" stroke="#e3e3e3"/>
+<line x1="650" x2="950" y1="202.27272727272728" y2="202.27272727272728" stroke="#e3e3e3"/>
+<line x1="650" x2="950" y1="136.36363636363637" y2="136.36363636363637" stroke="#e3e3e3"/>
+<path d="M670,400 V331.5 Q670,327.5 674,327.5 H714 Q718,327.5 718,331.5 V400 Z" fill="#b8b8b8"/>
+<text x="694" y="321.5" font-size="14" fill="#1a1a1a" text-anchor="middle" font-weight="bold">5.5%</text>
+<text x="694" y="418" font-size="12" fill="#555" text-anchor="middle" font-weight="normal">Before</text>
+<text x="694" y="433" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">48 of 879</text>
+<path d="M732,400 V257.6818181818182 Q732,253.6818181818182 736,253.6818181818182 H776 Q780,253.6818181818182 780,257.6818181818182 V400 Z" fill="#1f5fbf"/>
+<text x="756" y="247.6818181818182" font-size="14" fill="#1a1a1a" text-anchor="middle" font-weight="bold">11.1%</text>
+<text x="756" y="418" font-size="12" fill="#555" text-anchor="middle" font-weight="normal">After</text>
+<text x="756" y="433" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">49 of 440</text>
+<text x="725" y="460" font-size="13" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Callouts nobody took</text>
+<path d="M830,400 V373.6818181818182 Q830,369.6818181818182 834,369.6818181818182 H874 Q878,369.6818181818182 878,373.6818181818182 V400 Z" fill="#b8b8b8"/>
+<text x="854" y="363.6818181818182" font-size="14" fill="#1a1a1a" text-anchor="middle" font-weight="bold">2.3%</text>
+<text x="854" y="418" font-size="12" fill="#555" text-anchor="middle" font-weight="normal">Before</text>
+<text x="854" y="433" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">25 of 1,085</text>
+<path d="M892,400 V166.72727272727272 Q892,162.72727272727272 896,162.72727272727272 H936 Q940,162.72727272727272 940,166.72727272727272 V400 Z" fill="#d9730d"/>
+<text x="916" y="156.72727272727272" font-size="14" fill="#1a1a1a" text-anchor="middle" font-weight="bold">18.0%</text>
+<text x="916" y="418" font-size="12" fill="#555" text-anchor="middle" font-weight="normal">After</text>
+<text x="916" y="433" font-size="11" fill="#555" text-anchor="middle" font-weight="normal">110 of 611</text>
+<text x="885" y="460" font-size="13" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Pings missed</text>
+<text x="650" y="490" font-size="13" fill="#1a1a1a" text-anchor="start" font-weight="normal">Callouts nobody took: 2.0x. Pings missed: 7.8x.</text>
+<text x="30" y="506" font-size="11" fill="#555" text-anchor="start" font-weight="normal">Before = 29 Jun to 11 Aug (44 days). After = 12 Aug to 6 Sep (26 days). The 10 Aug week contains days from both periods.</text>
+</svg>
